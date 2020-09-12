@@ -22,7 +22,7 @@ export class AuthService {
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
     return this.httpClient.post<LoginResponseReturn>('http://localhost:8080/api/auth/login', loginRequestPayload)
       .pipe(map(data => {
-        this.localStorage.store('authenticationToken', data.jwtToken);
+        this.localStorage.store('jwtToken', data.jwtToken);
         this.localStorage.store('username', data.username);
         this.localStorage.store('refreshToken', data.refreshToken);
         this.localStorage.store('expiresAt', data.expiresAt);
