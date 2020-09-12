@@ -48,8 +48,9 @@ export class LoginComponent implements OnInit {
         this.isError = false;
         this.router.navigateByUrl('/');
         this.toastr.success('Login Successful');
-      } else this.isError = true;
-      
+      } else {
+        this.isError = true;
+      }
     });
   }
 
