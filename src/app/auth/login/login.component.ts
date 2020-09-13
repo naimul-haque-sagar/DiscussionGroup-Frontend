@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  registerSuccessMessage: string;
+  registerSuccessMessage: string="";
   isError: boolean;
   loginForm: FormGroup;
   loginRequestPayload: LoginRequestPayload;
